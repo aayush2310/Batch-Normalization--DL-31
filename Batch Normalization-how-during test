@@ -1,0 +1,14 @@
+During training we maintain exponentially weighted moving average.Lets say we have 100 rows and we have batch size of 4,so our algo is running 25 times in 1 epoch.So for 
+each batch we are having the values of mean and standard deviation.Using these values we maintain a exponentially weighted moving average.During test we use this last
+updated exponentially weighted moving average.
+During testing each neuron(connection) stores 4 parameters,two being learnable and two non-learnable namely-beta,gamma,mean,sd
+
+Advantages of Batch Normalization:-
+1)Training becomes more stable.We can choose from a wide range of values during hyperparameter training.
+2)Training becomes faster as the value of learning rate can be set to a higher value.
+3)Batch normalization can act as a regularizer(can help in overfitting)Not too strong
+  how?=>after each epoch and for each neuron the mean and sd is changed,and since it is mini batch,so it runs for multiple times in each epoch,now randomness is introduced
+        thus reducing the overfitting.
+ 4)Impact of weight initialization is reduced-weight initialization is not that important.Without normalization we get a oval,so reaching the center from perimeter is not
+   easy,but with normalization we get a circle and reaching the center from any point in the periphery is same.
+   
