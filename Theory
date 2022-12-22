@@ -1,0 +1,18 @@
+Batch Normalization is a algorithmic method which makes the training of Deep Neural Networks(DNN) faster and more stable.It consists of normalizing activation vectors from 
+hidden layers using the mean and variance of the current batch.This normalization step is applied right before(or right after) the non-linear function.
+
+a11 and a12 act are o/p of the first layer acting as i/p of second layer.In batch normalization we also normalize a11 and a12.for each hidden layer.
+
+Why batch Normalization?
+=>The i/p is normalised for reasons known.For same reason,for more good and stable o/p we thought that i/p to each layer should aslo be normalized.
+
+  Covariate shift:-We are working on a classification data and the training data is as in fig-1,and we got our model.Now while testing we received the data as in fig-2.
+                   Now in testing data,the distribution of our i/p columns has changed.the distribution of o/p is same that is by using the same deciosion boundary,we can
+                   divide the i/p and o/p.But the distribution has changed but it is said that if our distribution of i/p columns change and our decision boundary is 
+                   giving correct o/p,then also we need to train our model again.
+                   eg:-we made a deep learning model to distinguish b/w rose and not rose and in the training set we gave red rose as i/p,and in the testing we gave rose 
+                       of other colors also,so we need to train our model again as it will not give good result even if our ground truth that is relationship b/w x and y 
+                       remains the same.
+                       
+Internal-Covariate Shift:-It is the change in the distribution of network activations due to the change in network parameters during training.and if internal covariate 
+                          shift occurs,then the learning rate should be kept small and parameters should be initialised carefully.
