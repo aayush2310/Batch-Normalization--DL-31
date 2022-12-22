@@ -16,3 +16,10 @@ Why batch Normalization?
                        
 Internal-Covariate Shift:-It is the change in the distribution of network activations due to the change in network parameters during training.and if internal covariate 
                           shift occurs,then the learning rate should be kept small and parameters should be initialised carefully.
+                          
+                          Why are we multiplying with beta and gamma?
+                          =>Sometimes,the neural network does not want batch normalization.It wants some different distribution of data.So through beta and gamma i am 
+                            giving it flexibility.
+                            
+                            
+                            Batch normalization is applied layer by layer.A layer can be skipped if we want.
